@@ -1,0 +1,13 @@
+/* CSS by David Booth */
+/* Color Palette
+deep dark red = #590209
+red = #F20530
+dark red = #A60321
+blue = #03588C
+dark blue = #025373
+/*
+
+/* GLOBAL (base) MOBILE FIRST */
+body{
+    background-color:#025373;
+}
