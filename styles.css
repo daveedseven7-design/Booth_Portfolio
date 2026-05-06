@@ -1,5 +1,6 @@
 /* CSS by David Booth */
-/* Color Palette
+
+/* ===== COLOR VARIABLES ===== */
 :root {
   --deep-red: #590209;
   --red: #F20530;
@@ -8,7 +9,6 @@
   --dark-blue: #025373;
   --white: #ffffff;
 }
-/*
 
 /* ===== GLOBAL STYLES (MOBILE FIRST) ===== */
 body {
@@ -26,11 +26,14 @@ header {
   text-align: center;
 }
 
-nav {
-  display: flex;
-  flex-direction: column; /* mobile-first */
-  gap: 10px;
+/* ===== NAV FIX (UL + FLEX) ===== */
+nav ul {
+  list-style: none;
+  margin: 0;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   background: var(--dark-red);
 }
 
@@ -41,6 +44,7 @@ nav a {
   background: var(--red);
   border-radius: 5px;
   text-align: center;
+  display: block;
 }
 
 nav a:hover {
@@ -65,7 +69,7 @@ footer {
 
 /* ===== MEDIA QUERY (TABLET/DESKTOP) ===== */
 @media (min-width: 768px) {
-  nav {
+  nav ul {
     flex-direction: row;
     justify-content: center;
   }
