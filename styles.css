@@ -1,13 +1,76 @@
 /* CSS by David Booth */
 /* Color Palette
-deep dark red = #590209
-red = #F20530
-dark red = #A60321
-blue = #03588C
-dark blue = #025373
+:root {
+  --deep-red: #590209;
+  --red: #F20530;
+  --dark-red: #A60321;
+  --blue: #03588C;
+  --dark-blue: #025373;
+  --white: #ffffff;
+}
 /*
 
-/* GLOBAL (base) MOBILE FIRST */
-body{
-    background-color:#025373;
+/* ===== GLOBAL STYLES (MOBILE FIRST) ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--white);
+  color: var(--deep-red);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--deep-red);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: column; /* mobile-first */
+  gap: 10px;
+  padding: 10px;
+  background: var(--dark-red);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  background: var(--red);
+  border-radius: 5px;
+  text-align: center;
+}
+
+nav a:hover {
+  background: var(--blue);
+}
+
+/* ===== MAIN LAYOUT (GRID REQUIRED) ===== */
+main {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--dark-blue);
+  color: white;
+  margin-top: 20px;
+}
+
+/* ===== MEDIA QUERY (TABLET/DESKTOP) ===== */
+@media (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
